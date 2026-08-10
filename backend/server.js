@@ -20,27 +20,32 @@ app.get("/", (req, res) => {
 });
 
 // Get all todos
-app.get("/api/todos", async (req, res) => {
+const getTodos = async (req, res) => {
   try {
     const todos = await Todo.find();
     res.json(todos);
   } catch (error) {
     res.status(500).json({ error: error.message });
   }
-});
+};
 
 // Create a todo
-app.post("/api/todos", async (req, res) => {
+const createTodo = async (req, res) => {
   try {
     const todo = await Todo.create({
-      title: req.body.title
+      title: req.body.title,
     });
 
     res.status(201).json(todo);
   } catch (error) {
     res.status(500).json({ error: error.message });
   }
-});
+};
+
+app.get("/api/todos", getTodos);
+app.get("/todos", getTodos);
+app.post("/api/todos", createTodo);
+app.post("/todos", createTodo);
 
 // Connect MongoDB
 mongoose
