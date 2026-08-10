@@ -1,16 +1,94 @@
-# React + Vite
+# 📝 MERN Todo App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple and responsive **Todo List web application** built using the **MERN Stack**.
 
-Currently, two official plugins are available:
+This project allows users to create, view, update, and delete tasks. The application uses a React frontend, Node.js/Express backend, and MongoDB database for persistent data storage.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## 🚀 Live Demo : https://my-todo-app-omega-three.vercel.app
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+🌐 **Live Application:**  
+https://my-todo-app-71tc.onrender.com
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 📌 Features
+
+- ➕ Add new tasks
+- 📋 View all tasks
+- ✅ Mark tasks as completed
+- ✏️ Update tasks
+- 🗑️ Delete tasks
+- 💾 Store todos permanently using MongoDB
+- 🔗 REST API based backend
+- 📱 Responsive user interface
+- ⚡ Fast and simple React frontend
+- ☁️ Backend deployed on Render
+
+---
+
+## 🛠️ Tech Stack
+
+### Frontend
+
+- React.js
+- JavaScript
+- HTML5
+- CSS3
+- Vite
+
+### Backend
+
+- Node.js
+- Express.js
+- REST API
+
+### Database
+
+- MongoDB
+- MongoDB Atlas
+- Mongoose
+
+### Tools & Deployment
+
+- Git
+- GitHub
+- VS Code
+- Render
+- npm
+
+---
+
+## 📂 Project Structure
+
+```text
+MERN-Todo-App/
+│
+├── backend/
+│   ├── models/
+│   │   └── Todo.js
+│   │
+│   ├── routes/
+│   │   └── todoRoutes.js
+│   │
+│   ├── server.js
+│   ├── .env
+│   ├── package.json
+│   └── package-lock.json
+│
+├── frontend/
+│   ├── public/
+│   │
+│   ├── src/
+│   │   ├── App.jsx
+│   │   ├── App.css
+│   │   ├── main.jsx
+│   │   └── index.css
+│   │
+│   ├── index.html
+│   ├── package.json
+│   └── package-lock.json
+│
+├── .gitignore
+└── README.md
