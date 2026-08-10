@@ -6,11 +6,11 @@ function App() {
   const [title, setTitle] = useState("");
   const [showInput, setShowInput] = useState(false);
 
-  const API_URL = "/api";
+  const API_URL = "https://my-todo-app-71tc.onrender.com";
 
   const getTodos = async () => {
     try {
-      const response = await fetch(`${API_URL}/todos`);
+      const response = await fetch(`${API_URL}/api/todos`);
       const data = await response.json();
       setTodos(data);
     } catch (error) {
@@ -24,7 +24,7 @@ function App() {
     if (!title.trim()) return;
 
     try {
-      const response = await fetch(`${API_URL}/todos`, {
+      const response = await fetch(`${API_URL}/api/todos`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
