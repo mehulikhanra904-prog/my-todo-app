@@ -4,14 +4,8 @@ A simple and responsive **Todo List web application** built using the **MERN Sta
 
 This project allows users to create, view, update, and delete tasks. The application uses a React frontend, Node.js/Express backend, and MongoDB database for persistent data storage.
 
----
-
-## 🚀 Live Demo : https://my-todo-app-omega-three.vercel.app
-
-🌐 **Live Application:**  
-https://my-todo-app-71tc.onrender.com
-
----
+## 🚀 Live Demo
+https://my-todo-app-omega-three.vercel.app
 
 ## 📌 Features
 
@@ -27,7 +21,6 @@ https://my-todo-app-71tc.onrender.com
 - ☁️ Backend deployed on Render
 
 ---
-
 ## 🛠️ Tech Stack
 
 ### Frontend
