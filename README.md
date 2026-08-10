@@ -7,6 +7,10 @@ This project allows users to create, view, update, and delete tasks. The applica
 ## 🚀 Live Demo
 https://my-todo-app-omega-three.vercel.app
 
+## Backend API 
+Backend API is deployed separately on Render .
+## Backend:https://my-todo-app-71tc.onrender.com
+
 ## 📌 Features
 
 - ➕ Add new tasks
