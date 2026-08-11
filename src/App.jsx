@@ -10,7 +10,10 @@ function App() {
 
   const getTodos = async () => {
     try {
-      const response = await fetch(`${API_URL}/api/todos`);
+      const response = await fetch(`/api/todos`);
+      if (!response.ok) {
+        throw new Error("Failed to load todos");
+      }
       const data = await response.json();
       setTodos(data);
     } catch (error) {
@@ -24,23 +27,28 @@ function App() {
     if (!title.trim()) return;
 
     try {
-      const response = await fetch(`${API_URL}/api/todos`, {
+      const response = await fetch(`/api/todos`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          title: title,
+          title: title.trim(),
         }),
       });
 
+      if (!response.ok) {
+        throw new Error("Could not add todo");
+      }
+
       const newTodo = await response.json();
 
-      setTodos([...todos, newTodo]);
+      setTodos((prevTodos) => [...prevTodos, newTodo]);
       setTitle("");
       setShowInput(false);
     } catch (error) {
       console.log("Error adding todo:", error);
+      alert("Could not add task. Backend is not connected.");
     }
   };
 
