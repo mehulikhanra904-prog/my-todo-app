@@ -6,11 +6,11 @@ function App() {
   const [title, setTitle] = useState("");
   const [showInput, setShowInput] = useState(false);
 
-  const API_URL = "https://my-todo-app-71tc.onrender.com";
+  const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5000";
 
   const getTodos = async () => {
     try {
-      const response = await fetch(`/api/todos`);
+      const response = await fetch(`${API_URL}/api/todos`);
       if (!response.ok) {
         throw new Error("Failed to load todos");
       }
@@ -27,7 +27,7 @@ function App() {
     if (!title.trim()) return;
 
     try {
-      const response = await fetch(`/api/todos`, {
+      const response = await fetch(`${API_URL}/api/todos`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
